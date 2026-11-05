@@ -1,0 +1,36 @@
+:root {
+  color-scheme: light;
+  font-family: 'DM Sans', 'Avenir Next', sans-serif;
+  color: #202a26;
+  background: #f7f8f5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --color-ink: #202a26;
+  --color-muted: #68736d;
+  --color-accent: #286b52;
+  --color-line: #dce3dd;
+  --color-surface: #f7f8f5;
+  --space-page: clamp(1.5rem, 7vw, 7rem);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  color: #fff;
+  background: var(--color-accent);
+}

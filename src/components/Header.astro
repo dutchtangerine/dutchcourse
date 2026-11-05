@@ -1,0 +1,35 @@
+<header class="site-header">
+  <a class="brand" href="/">My Website</a>
+  <nav aria-label="Main navigation">
+    <a href="/">Home</a>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 5rem;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .brand {
+    font-weight: 700;
+    letter-spacing: 0;
+  }
+
+  nav a {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+  }
+
+  nav a:hover,
+  nav a:focus-visible {
+    color: var(--color-accent);
+  }
+</style>
