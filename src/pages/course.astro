@@ -1,0 +1,214 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+	title="수업 안내 및 가격 | Dutch Tangerine"
+	description="네덜란드어 1:1 프라이빗 클래스와 2~4인 소그룹 클래스의 수업 시간과 가격을 확인하세요."
+>
+	<section class="mx-auto w-full max-w-6xl py-8 md:py-12">
+		<header class="mx-auto mb-9 max-w-2xl text-center md:mb-12">
+			<p class="mb-4 inline-flex items-center gap-2 rounded-full border border-orange-200 bg-orange-50 px-3 py-1 text-xs font-semibold tracking-[0.12em] text-orange-800 uppercase">
+				Dutch Tangerine · 수업 안내
+			</p>
+			<h1 class="text-4xl leading-tight font-semibold text-emerald-950 sm:text-5xl">
+				네덜란드어, <span class="text-orange-600">나답게</span> 배우기
+			</h1>
+			<p class="mx-auto mt-4 max-w-xl text-base leading-7 text-stone-600 sm:text-lg">
+				나에게 꼭 맞는 방식으로 시작해 보세요. 수업 시간과 인원에 따라 알맞은 코스를 골라보세요.
+			</p>
+		</header>
+
+		<div class="mb-8 flex flex-col items-center gap-3 sm:mb-10">
+			<p class="text-sm font-medium text-stone-600">수업 시간을 선택해 주세요</p>
+			<div
+				class="inline-flex rounded-lg border border-stone-200 bg-stone-100 p-1"
+				data-duration-toggle
+				role="group"
+				aria-label="수업 시간 선택"
+			>
+				<button
+					class="duration-option rounded-md px-5 py-2.5 text-sm font-semibold text-stone-600 transition-colors"
+					type="button"
+					data-duration-option="1"
+					aria-pressed="false"
+				>
+					1시간
+				</button>
+				<button
+					class="duration-option is-active inline-flex items-center gap-2 rounded-md px-5 py-2.5 text-sm font-semibold text-stone-600 transition-colors"
+					type="button"
+					data-duration-option="2"
+					aria-pressed="true"
+				>
+					2시간
+					<span class="rounded-full bg-orange-100 px-2 py-0.5 text-[0.65rem] font-bold text-orange-800">추천</span>
+				</button>
+			</div>
+		</div>
+
+		<div class="grid grid-cols-1 items-stretch gap-5 lg:grid-cols-2">
+			<article class="flex flex-col rounded-lg border border-stone-200 bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
+				<div class="mb-6">
+					<p class="mb-2 text-sm font-semibold text-emerald-800">01 · PRIVATE</p>
+					<h2 class="text-2xl font-semibold text-stone-900">1:1 프라이빗 클래스</h2>
+					<p class="mt-2 text-sm leading-6 text-stone-600">나의 목표와 속도에 집중하는 맞춤형 수업</p>
+				</div>
+
+				<div class="mb-7 border-b border-stone-200 pb-6">
+					<div class="flex items-baseline gap-2">
+						<span class="text-2xl font-medium text-stone-500">€</span>
+						<span
+							class="price-value text-5xl font-semibold text-stone-950"
+							data-price
+							data-one-hour="30"
+							data-two-hour="50"
+							aria-live="polite"
+						>50</span>
+						<span class="text-sm text-stone-500">/ 1회</span>
+					</div>
+					<p class="mt-2 text-sm text-stone-500">1인 기준</p>
+				</div>
+
+				<ul class="mb-8 space-y-3 text-sm leading-6 text-stone-700">
+					<li class="flex gap-3"><span class="font-bold text-emerald-700" aria-hidden="true">✓</span><span>개인별 맞춤형 목표 설정 및 커리큘럼</span></li>
+					<li class="flex gap-3"><span class="font-bold text-emerald-700" aria-hidden="true">✓</span><span>1:1 밀착 발음 및 작문 피드백</span></li>
+					<li class="flex gap-3"><span class="font-bold text-emerald-700" aria-hidden="true">✓</span><span>개인 Notion 단어장 및 문법 요약본 제공</span></li>
+					<li class="flex gap-3"><span class="font-bold text-emerald-700" aria-hidden="true">✓</span><span>온라인 화상 수업 기본</span></li>
+				</ul>
+
+				<a
+					class="mt-auto inline-flex min-h-12 items-center justify-center rounded-lg border border-emerald-800 px-5 py-3 text-sm font-semibold text-emerald-900 transition-colors hover:bg-emerald-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-800"
+					href="mailto:?subject=%EB%84%A4%EB%8D%9C%EB%9E%80%EB%93%9C%EC%96%B4%201%3A1%20%EC%88%98%EC%97%85%20%EC%83%81%EB%8B%B4"
+				>
+					이 코스로 상담 신청하기
+				</a>
+			</article>
+
+			<article class="relative flex flex-col rounded-lg border-2 border-orange-500 bg-orange-50/80 p-6 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-lg sm:p-8">
+				<div class="mb-6">
+					<span class="mb-4 inline-flex rounded-full bg-orange-500 px-3 py-1 text-xs font-bold tracking-wide text-white">🔥 BEST VALUE</span>
+					<p class="mb-2 text-sm font-semibold text-orange-800">02 · SMALL GROUP</p>
+					<h2 class="text-2xl font-semibold text-stone-900">1:N 소그룹 클래스</h2>
+					<p class="mt-2 text-sm leading-6 text-stone-600">2~4명이 함께 배우고 연습하는 클래스</p>
+				</div>
+
+				<div class="mb-7 border-b border-orange-200 pb-6">
+					<div class="flex items-baseline gap-2">
+						<span class="text-2xl font-medium text-stone-500">€</span>
+						<span
+							class="price-value text-5xl font-semibold text-stone-950"
+							data-price
+							data-one-hour="50"
+							data-two-hour="80"
+							aria-live="polite"
+						>80</span>
+						<span class="text-sm text-stone-500">/ 그룹 총액</span>
+					</div>
+					<p
+						class="price-caption mt-2 text-sm font-semibold text-orange-700"
+						data-group-caption
+						data-one-hour="✨ 4인 모객 시 인당 €12.50!"
+						data-two-hour="✨ 4인 모객 시 인당 €20!"
+					>
+						✨ 4인 모객 시 인당 €20!
+					</p>
+				</div>
+
+				<ul class="mb-8 space-y-3 text-sm leading-6 text-stone-700">
+					<li class="flex gap-3"><span class="font-bold text-orange-700" aria-hidden="true">✓</span><span>2~4인 맞춤형 그룹 커리큘럼</span></li>
+					<li class="flex gap-3"><span class="font-bold text-orange-700" aria-hidden="true">✓</span><span>실전 상황 롤플레잉 및 대화 연습</span></li>
+					<li class="flex gap-3"><span class="font-bold text-orange-700" aria-hidden="true">✓</span><span>그룹 Notion 복습 워크스페이스 제공</span></li>
+					<li class="flex gap-3"><span class="font-bold text-orange-700" aria-hidden="true">✓</span><span>온라인 화상 수업 기본</span></li>
+				</ul>
+
+				<a
+					class="mt-auto inline-flex min-h-12 items-center justify-center rounded-lg bg-orange-600 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-orange-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-orange-700"
+					href="mailto:?subject=%EB%84%A4%EB%8D%9C%EB%9E%80%EB%93%9C%EC%96%B4%20%EC%86%8C%EA%B7%B8%EB%A3%B9%20%EC%88%98%EC%97%85%20%EC%83%81%EB%8B%B4"
+				>
+					이 코스로 상담 신청하기
+				</a>
+			</article>
+		</div>
+
+		<p class="mt-6 text-center text-xs leading-5 text-stone-500 sm:mt-8">
+			암스테르담 지역 내 오프라인 대면 수업 요청 시, 회당 €10~15의 출장비가 추가됩니다.
+		</p>
+	</section>
+</BaseLayout>
+
+<script>
+	const durationToggle = document.querySelector('[data-duration-toggle]');
+
+	if (durationToggle) {
+		const options = durationToggle.querySelectorAll('[data-duration-option]');
+		const prices = document.querySelectorAll('[data-price]');
+		const groupCaption = document.querySelector('[data-group-caption]');
+		const pendingUpdates = new WeakMap();
+
+		const updateText = (element, value) => {
+			const pendingUpdate = pendingUpdates.get(element);
+			if (pendingUpdate) window.clearTimeout(pendingUpdate);
+
+			element.classList.add('is-changing');
+			const timer = window.setTimeout(() => {
+				element.textContent = value;
+				element.classList.remove('is-changing');
+				pendingUpdates.delete(element);
+			}, 120);
+
+			pendingUpdates.set(element, timer);
+		};
+
+		options.forEach((option) => {
+			option.addEventListener('click', () => {
+				const duration = option.dataset.durationOption;
+				const priceKey = duration === '1' ? 'oneHour' : 'twoHour';
+
+				options.forEach((item) => {
+					const isActive = item === option;
+					item.classList.toggle('is-active', isActive);
+					item.setAttribute('aria-pressed', String(isActive));
+				});
+
+				prices.forEach((price) => {
+					const nextPrice = price.dataset[priceKey];
+					if (nextPrice) updateText(price, nextPrice);
+				});
+
+				const nextCaption = groupCaption?.dataset[priceKey];
+				if (groupCaption && nextCaption) updateText(groupCaption, nextCaption);
+			});
+		});
+	}
+</script>
+
+<style>
+	.duration-option.is-active {
+		color: #064e3b;
+		background: #fff;
+		box-shadow: 0 1px 3px rgb(28 25 23 / 0.12);
+	}
+
+	.duration-option:focus-visible {
+		outline: 2px solid #047857;
+		outline-offset: 2px;
+	}
+
+	.price-value,
+	.price-caption {
+		transition: opacity 180ms ease, transform 180ms ease;
+	}
+
+	.is-changing {
+		opacity: 0.2;
+		transform: translateY(3px);
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.price-value,
+		.price-caption {
+			transition: none;
+		}
+	}
+</style>

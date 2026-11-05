@@ -1,7 +1,11 @@
+---
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
 <header class="site-header">
-  <a class="brand" href="/">My Website</a>
-  <nav aria-label="Main navigation">
-    <a href="/">Home</a>
+  <a class="brand" href={`${baseUrl}/`}>Dutch Tangerine<span>.</span></a>
+  <nav aria-label="주요 메뉴">
+    <a href={`${baseUrl}/course/`}>수업 안내</a>
   </nav>
 </header>
 
@@ -21,6 +25,10 @@
   .brand {
     font-weight: 700;
     letter-spacing: 0;
+  }
+
+  .brand span {
+    color: #e7743d;
   }
 
   nav a {
