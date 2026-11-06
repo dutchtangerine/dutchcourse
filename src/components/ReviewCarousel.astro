@@ -1,0 +1,168 @@
+---
+import { Image } from 'astro:assets';
+import avatar1 from '../assets/img/avatar/avatar-1.png';
+import avatar2 from '../assets/img/avatar/avatar-2.png';
+import avatar3 from '../assets/img/avatar/avatar-3.png';
+import avatar4 from '../assets/img/avatar/avatar-4.png';
+import avatar5 from '../assets/img/avatar/avatar-5.png';
+import avatar6 from '../assets/img/avatar/avatar-6.png';
+import avatar7 from '../assets/img/avatar/avatar-7.png';
+import avatar8 from '../assets/img/avatar/avatar-8.png';
+
+const reviews = [
+	{
+		tag: '[ A2 시험 대비반 ]',
+		name: '직장인 K님',
+		summary: '분리 동사, 어순이 드디어 이해돼요!',
+		text: '매번 헷갈렸던 어순을 상세하게 설명해주시고, 한국인인 저에게 이해하기 쉽도록 설명해주셔서 너무 좋았어요!',
+	},
+	{
+		tag: '[ 실전 생존 회화반 ]',
+		name: '유학생 이OO님',
+		summary: '카페에서 스몰토크 성공 ㅠㅠ',
+		text: '진짜 실생활에서 바로 쓰는 생존 더치를 배울 수 있어서 너무 좋아요. 롤플레잉 수업하고 나서 마트나 기차역에서 현지인들과 대화하는 게 두렵지 않아졌습니다.',
+	},
+	{
+		tag: '[ A2 단기 패키지 ]',
+		name: '직장인 박님',
+		summary: '맞춤형 노션 단어장이 진짜 신의 한 수',
+		text: '수업 끝나고 제 전용 노션 페이지에 그날 배운 단어랑 문법을 다 정리해주시니까 출퇴근길에 폰으로 복습하기 너무 편합니다. 쌤 자료 정리 퀄리티가 정말 최고예요!',
+	},
+	{
+		tag: '[ 실전 생존 회화반 ]',
+		name: '직장인 최OO님',
+		summary: '드디어 더치 동료가 제 말을 알아들어요!',
+		text: '한국인들이 특히 어려워하는 G, CH 발음부터 장모음/단모음 구별까지 집요하게 교정해 주신 덕분에 발음에 자신감이 생겼습니다. 회사 커피 머신 앞에서 스몰토크가 가능해졌어요.',
+	},
+	{
+		tag: '[ B1 시험 대비반 ]',
+		name: '직장인 정님',
+		summary: 'Inburgering 쓰기 최고',
+		text: '어떤 주제가 나와도 당황하지 않고 쓸 수 있게끔 여러 유형들을 다루어주셔서 좋았어요. 작문 피드백도 정말 꼼꼼해요!',
+	},
+	{
+		tag: '[ 1:1 프라이빗 클래스 ]',
+		name: '직장인 H님',
+		summary: '퇴근 후 힐링되는 긍정 에너지 🍊',
+		text: '일 끝나고 과외를 받는 게 체력적으로 힘들 줄 알았는데, 쌤 에너지가 너무 밝으셔서 항상 즐겁게 수업하고 있습니다. 중간중간 알려주시는 네덜란드 생활 꿀팁은 덤이에요!',
+	},
+	{
+		tag: '[ A2 단기 패키지 ]',
+		name: '대학생 유님',
+		summary: '제 관심사에 맞춘 뉴스 기사로 공부해요',
+		text: '딱딱한 시중 교재 대신 제 전공과 관심사에 맞는 네덜란드 뉴스 기사나 실생활 텍스트를 직접 발췌해서 수업해 주시니 몰입도가 다릅니다. 지루할 틈이 없는 맞춤형 수업이에요.',
+	},
+	{
+		tag: '[ 실전 생존 회화반 ]',
+		name: '직장인 김OO님',
+		summary: '지인 추천으로 왔는데 200% 만족합니다!',
+		text: '먼저 수업 듣던 친구가 너무 좋다고 추천해서 시범 수업을 들었는데, 왜 추천했는지 바로 알겠더라고요. 학생 눈높이에 맞춰 친절하게 설명해주시고 기초부터 탄탄하게 잡아주십니다.',
+	},
+];
+
+const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8];
+const stars = Array.from({ length: 5 });
+---
+
+<section class="overflow-hidden bg-orange-50/50 py-16 sm:py-20" aria-labelledby="reviews-title">
+	<div class="mb-10 px-5 text-center sm:px-8">
+		<h2 id="reviews-title" class="text-2xl font-bold text-gray-900 sm:text-3xl">
+			💬 먼저 경험한 수강생들의 생생한 후기
+		</h2>
+	</div>
+
+	<div class="review-marquee w-full" aria-label="수강생 후기">
+		<div class="review-track flex w-max">
+			<div class="review-group flex shrink-0 gap-6 pr-6">
+				{reviews.map((review, index) => (
+					<article class="flex h-[340px] w-[350px] shrink-0 flex-col rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+						<div class="flex gap-1" aria-label="별점 5점">
+							{stars.map(() => (
+								<svg class="size-5 fill-yellow-400" viewBox="0 0 24 24" aria-hidden="true">
+									<path d="M12 2.25 14.93 8.19l6.56.95-4.75 4.63 1.12 6.54L12 17.22l-5.86 3.09 1.12-6.54L2.5 9.14l6.57-.95L12 2.25Z" />
+								</svg>
+							))}
+						</div>
+
+						<h3 class="mt-4 text-lg font-bold text-gray-900">{review.summary}</h3>
+						<p class="mt-2 text-sm leading-relaxed text-gray-600">{review.text}</p>
+
+						<div class="mt-auto flex items-center gap-3 pt-5">
+							<Image
+								src={avatars[index]}
+								alt={review.name}
+								class="size-10 shrink-0 rounded-full bg-orange-100 object-cover"
+								width={40}
+								height={40}
+								loading="lazy"
+							/>
+							<div class="flex min-w-0 flex-col gap-1">
+								<p class="text-sm font-medium text-gray-900">{review.name}</p>
+								<p class="text-xs font-semibold text-orange-500">{review.tag}</p>
+							</div>
+						</div>
+					</article>
+				))}
+			</div>
+
+			<div class="review-group flex shrink-0 gap-6 pr-6" aria-hidden="true">
+				{reviews.map((review, index) => (
+					<article class="flex h-[340px] w-[350px] shrink-0 flex-col rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+						<div class="flex gap-1">
+							{stars.map(() => (
+								<svg class="size-5 fill-yellow-400" viewBox="0 0 24 24" aria-hidden="true">
+									<path d="M12 2.25 14.93 8.19l6.56.95-4.75 4.63 1.12 6.54L12 17.22l-5.86 3.09 1.12-6.54L2.5 9.14l6.57-.95L12 2.25Z" />
+								</svg>
+							))}
+						</div>
+
+						<h3 class="mt-4 text-lg font-bold text-gray-900">{review.summary}</h3>
+						<p class="mt-2 text-sm leading-relaxed text-gray-600">{review.text}</p>
+
+						<div class="mt-auto flex items-center gap-3 pt-5">
+							<Image
+								src={avatars[index]}
+								alt=""
+								class="size-10 shrink-0 rounded-full bg-orange-100 object-cover"
+								width={40}
+								height={40}
+								loading="lazy"
+							/>
+							<div class="flex min-w-0 flex-col gap-1">
+								<p class="text-sm font-medium text-gray-900">{review.name}</p>
+								<p class="text-xs font-semibold text-orange-500">{review.tag}</p>
+							</div>
+						</div>
+					</article>
+				))}
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.review-track {
+		animation: review-marquee 64s linear infinite;
+	}
+
+	.review-marquee:hover .review-track,
+	.review-marquee:focus-within .review-track {
+		animation-play-state: paused;
+	}
+
+	@keyframes review-marquee {
+		to {
+			transform: translateX(-50%);
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.review-marquee {
+			overflow-x: auto;
+		}
+
+		.review-track {
+			animation: none;
+		}
+	}
+</style>
